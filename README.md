@@ -29,4 +29,4 @@ Please send us a zip file of your challenge when completed.
 
 # Duration
 
-You will have 6 hours to build and turn in your app.
+You will have 5 hours to build and turn in your app.
