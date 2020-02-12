@@ -29,4 +29,4 @@ Please send us a zip file of your challenge when completed.
 
 # Duration
 
-You will have 5 hours to build and turn in your app.
+This challenge is designed for a wide spectrum of skill levels. Please complete whatever you can in 5 hours. We do not expect (or want) you to spend a full day on this just to get the entire list of tasks done. After 5 hours of work, please zip and upload your app.  Good luck!
