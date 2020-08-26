@@ -25,7 +25,7 @@ $ git clone https://gitlab.com/video-platforms-coding-challenge/ui-challenge
 
 # Submitting the Project
 
-Please send us a zip file of your challenge when completed.
+Please email us a zip file of your challenge when completed.
 
 # Duration
 
