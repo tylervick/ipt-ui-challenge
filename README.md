@@ -23,7 +23,7 @@ We provide you with a simulated API response JSON for a list of movies and a fol
 ## Checking Out the Project
 
 ```
-$ git clone https://gitlab.com/video-platforms-coding-challenge/ui-challenge
+$ git clone https://gitlab.disney.com/ipt/code-challenges/ui-challenge.git
 ```
 
 # Submitting the Project
