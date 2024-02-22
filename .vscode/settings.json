@@ -1,7 +1,11 @@
 {
-  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "quickfix.biome": "always",
+    "source.organizeImports.biome": "always"
+  },
   "editor.tabSize": 2,
-  "cSpell.words": ["Fastify", "lucide", "pino", "styl", "tailwindcss"],
+  "cSpell.words": ["clsx", "Fastify", "lucide", "pino", "styl", "tailwindcss"],
   "[javascript]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
@@ -28,5 +32,6 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "biomejs.biome"
-  }
+  },
+  "typescript.preferences.preferTypeOnlyAutoImports": true
 }
