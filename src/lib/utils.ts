@@ -13,9 +13,14 @@ const fetchMovies = cache(async (): Promise<MovieResponse> => {
   return data;
 });
 
-const fetchMovie = cache(async (title: string): Promise<Movie | undefined> => {
-  const data = makeData();
+const fetchMovieByTitle = cache(async (title: string): Promise<Movie | undefined> => {
+  const data = await fetchMovies();
   return data.items.find((item) => item.title === title);
 });
 
-export { cn, fetchMovies, fetchMovie };
+const fetchMovieBySlug = cache(async (slug: string): Promise<Movie | undefined> => {
+  const data = await fetchMovies();
+  return data.items.find((item) => item.slug === slug);
+});
+
+export { cn, fetchMovies, fetchMovieByTitle, fetchMovieBySlug };

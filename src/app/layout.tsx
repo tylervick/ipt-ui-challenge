@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 import { Provider as JotaiProvider } from 'jotai';
 import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
-import { memo } from 'react';
+import { type ReactNode, memo } from 'react';
 import './globals.css';
 
 export const fontSans = FontSans({
@@ -28,8 +28,10 @@ export const metadata: Metadata = {
 
 const RootLayout = memo(async function RootLayout({
   children,
+  modal,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
+  modal: ReactNode;
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
@@ -39,7 +41,10 @@ const RootLayout = memo(async function RootLayout({
           <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
             <div className='relative flex min-h-screen flex-col'>
               <SiteHeader />
-              <div className='flex-1'>{children}</div>
+              <div id='modal-root' />
+              <div className='flex flex-1'>{children}</div>
+              {/* Parallel route support */}
+              {modal}
             </div>
           </ThemeProvider>
         </JotaiProvider>
