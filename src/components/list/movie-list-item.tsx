@@ -51,6 +51,7 @@ const MovieListItem = memo(function MovieListItem({ movie, width, height }: Movi
             camera={{
               position: [0, 0, 5],
               fov: 50,
+              far: 800,
             }}
           >
             <PresentationControls enabled snap rotation={[0, 0.2, 0]} cursor={false}>
@@ -60,10 +61,13 @@ const MovieListItem = memo(function MovieListItem({ movie, width, height }: Movi
           </Canvas>
         </div>
         <div className='flex items-center justify-evenly'>
-          <Label htmlFor={`${movie.title}-detail`}>{movie.title}</Label>
-          <Button id={`${movie.title}-detail`} variant='outline' size='icon' asChild>
+          {/* <Label className='text-md' htmlFor={`${movie.title}-detail`}>
+            {movie.title}
+          </Label> */}
+          <Button id={`${movie.title}-detail`} variant='ghost' asChild>
             <Link href={`/${movie.slug}`}>
-              <ChevronRight className='h-4 w-4' />
+              {movie.title}
+              <ChevronRight className='h-4 w-4 ml-2' />
             </Link>
           </Button>
         </div>
